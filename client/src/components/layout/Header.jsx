@@ -2,6 +2,7 @@ import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
+import logo from '../../assets/logo.svg';
 import Button from '../common/Button';
 import Container from '../common/Container';
 
@@ -27,9 +28,9 @@ function Header() {
           {/* Logo */}
           <Link
             to="/"
-            className="text-xl font-bold tracking-tight text-blue-600"
+            className="flex items-center"
           >
-            HealthCare<span className="text-slate-900">+</span>
+            <img src={logo} alt="Care in India Logo" className="h-10 w-auto object-contain" />
           </Link>
 
           {/* Desktop Navigation */}
