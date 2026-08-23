@@ -3,6 +3,7 @@ import Container from '../components/common/Container';
 import HomeBar from './HomeBar';
 import { Search } from 'lucide-react';
 import PatientStory from './PatientStory';
+import Blog from './Blog';
 
 function HomePage() {
   return (
@@ -43,6 +44,9 @@ function HomePage() {
       <HomeBar/>
       <Container>
         <PatientStory/>
+      </Container>
+      <Container>
+        <Blog/>
       </Container>
     </div>
   );

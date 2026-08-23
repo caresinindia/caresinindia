@@ -11,6 +11,7 @@ const navigationLinks = [
   { label: 'Find a Doctor', path: '/doctors' },
   { label: 'Hospitals', path: '/hospitals' },
   { label: 'Specialities', path: '/specialities' },
+  { label: 'Patient Blogs', path: '/blog' },
 ];
 
 function Header() {

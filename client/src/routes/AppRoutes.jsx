@@ -1,7 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
 
 import MainLayout from '../components/layout/MainLayout';
+import Blog from '../pages/Blog';
 import HomePage from '../pages/HomePage';
+import PetientReview from '../pages/PetientReview';
 import ProfilePage from '../pages/ProfilePage';
 
 function PlaceholderPage({ title }) {
@@ -29,6 +31,33 @@ function AppRoutes() {
         element={
           <MainLayout>
             <ProfilePage />
+          </MainLayout>
+        }
+      />
+
+      <Route
+        path="/blog"
+        element={
+          <MainLayout>
+            <Blog />
+          </MainLayout>
+        }
+      />
+
+      <Route
+        path="/patient-review"
+        element={
+          <MainLayout>
+            <PetientReview />
+          </MainLayout>
+        }
+      />
+
+      <Route
+        path="/patient-review/:id"
+        element={
+          <MainLayout>
+            <PetientReview />
           </MainLayout>
         }
       />
