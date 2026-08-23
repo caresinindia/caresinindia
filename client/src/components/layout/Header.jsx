@@ -1,4 +1,4 @@
-import { Menu, X } from 'lucide-react';
+import { Menu, User, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
@@ -49,6 +49,14 @@ function Header() {
           {/* Desktop Actions */}
           <div className="hidden items-center gap-4 md:flex">
             <Link
+              to="/profile"
+              className="flex items-center gap-1.5 text-sm font-semibold text-slate-700 transition-colors hover:text-blue-600"
+            >
+              <User size={18} />
+              Profile
+            </Link>
+
+            <Link
               to="/login"
               className="text-sm font-semibold text-slate-700 hover:text-blue-600"
             >
@@ -85,6 +93,15 @@ function Header() {
                   {link.label}
                 </NavLink>
               ))}
+
+              <Link
+                to="/profile"
+                className="flex items-center gap-2 text-sm font-semibold text-slate-700 hover:text-blue-600"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <User size={18} />
+                Profile
+              </Link>
 
               <Link to="/login" onClick={() => setIsMenuOpen(false)}>
                 Login

@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import MainLayout from '../components/layout/MainLayout';
 import HomePage from '../pages/HomePage';
+import ProfilePage from '../pages/ProfilePage';
 
 function PlaceholderPage({ title }) {
   return (
@@ -19,6 +20,15 @@ function AppRoutes() {
         element={
           <MainLayout>
             <HomePage />
+          </MainLayout>
+        }
+      />
+
+      <Route
+        path="/profile"
+        element={
+          <MainLayout>
+            <ProfilePage />
           </MainLayout>
         }
       />
