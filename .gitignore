@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -22,3 +23,26 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+=======
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Build files
+dist/
+build/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+>>>>>>> d0bb72f6f49bce268a08f0a5f8ec5c0b574f9b6a
