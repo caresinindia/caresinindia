@@ -1,7 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 
 import MainLayout from '../components/layout/MainLayout';
-import HomePage from '../pages/HomePage';
+import DoctorList from '../pages/doctor/DoctorList';
+import DoctorProfile from '../pages/doctor/DoctorProfile';
+import Blog from '../pages/home/Blog';
+import HomePage from '../pages/home/HomePage';
+import PetientReview from '../pages/home/PetientReview';
+import ProfilePage from '../pages/home/ProfilePage';
 
 function PlaceholderPage({ title }) {
   return (
@@ -24,10 +29,55 @@ function AppRoutes() {
       />
 
       <Route
+        path="/profile"
+        element={
+          <MainLayout>
+            <ProfilePage />
+          </MainLayout>
+        }
+      />
+
+      <Route
+        path="/blog"
+        element={
+          <MainLayout>
+            <Blog />
+          </MainLayout>
+        }
+      />
+
+      <Route
+        path="/patient-review"
+        element={
+          <MainLayout>
+            <PetientReview />
+          </MainLayout>
+        }
+      />
+
+      <Route
+        path="/patient-review/:id"
+        element={
+          <MainLayout>
+            <PetientReview />
+          </MainLayout>
+        }
+      />
+
+      <Route
         path="/doctors"
         element={
           <MainLayout>
-            <PlaceholderPage title="Find a Doctor" />
+            <DoctorList />
+          </MainLayout>
+        }
+      />
+
+      <Route
+        path="/doctors/:id"
+        element={
+          <MainLayout>
+            <DoctorProfile />
           </MainLayout>
         }
       />
@@ -54,7 +104,7 @@ function AppRoutes() {
         path="/book-appointment"
         element={
           <MainLayout>
-            <PlaceholderPage title="Book Appointment" />
+            <DoctorList isBookingMode={true} />
           </MainLayout>
         }
       />
