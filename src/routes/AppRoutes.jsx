@@ -8,6 +8,9 @@ import HomePage from '../pages/home/HomePage';
 import PetientReview from '../pages/home/PetientReview';
 import ProfilePage from '../pages/home/ProfilePage';
 
+import HospitalDetail from '../pages/hospitals/HospitalDetail';
+import HospitalList from '../pages/hospitals/HospitalList';
+
 function PlaceholderPage({ title }) {
   return (
     <section className="mx-auto flex min-h-[70vh] max-w-7xl items-center px-4">
@@ -86,7 +89,25 @@ function AppRoutes() {
         path="/hospitals"
         element={
           <MainLayout>
-            <PlaceholderPage title="Hospitals" />
+            <HospitalList />
+          </MainLayout>
+        }
+      />
+
+      <Route
+        path="/hospitals/:id"
+        element={
+          <MainLayout>
+            <HospitalDetail />
+          </MainLayout>
+        }
+      />
+
+      <Route
+        path="/hospital/:id"
+        element={
+          <MainLayout>
+            <HospitalDetail />
           </MainLayout>
         }
       />
