@@ -7,9 +7,10 @@ import Blog from '../pages/home/Blog';
 import HomePage from '../pages/home/HomePage';
 import PetientReview from '../pages/home/PetientReview';
 import ProfilePage from '../pages/home/ProfilePage';
-
 import HospitalDetail from '../pages/hospitals/HospitalDetail';
 import HospitalList from '../pages/hospitals/HospitalList';
+import SpecialistDetail from '../pages/specialist/SpecialistDetail';
+import SpecialistList from '../pages/specialist/SpecialistList';
 
 function PlaceholderPage({ title }) {
   return (
@@ -112,11 +113,48 @@ function AppRoutes() {
         }
       />
 
-      <Route
+      {/* Specialist & Specialities Routes */}
+      <Route 
         path="/specialities"
         element={
           <MainLayout>
-            <PlaceholderPage title="Specialities" />
+            <SpecialistList />
+          </MainLayout>
+        }
+      />
+
+      <Route 
+        path="/specialist"
+        element={
+          <MainLayout>
+            <SpecialistList />
+          </MainLayout>
+        }
+      />
+
+      <Route 
+        path="/specialists"
+        element={
+          <MainLayout>
+            <SpecialistList />
+          </MainLayout>
+        }
+      />
+
+      <Route 
+        path="/specialities/:id"
+        element={
+          <MainLayout>
+            <SpecialistDetail />
+          </MainLayout>
+        }
+      />
+
+      <Route 
+        path="/specialist/:id"
+        element={
+          <MainLayout>
+            <SpecialistDetail />
           </MainLayout>
         }
       />
